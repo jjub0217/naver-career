@@ -1,0 +1,95 @@
+:root {
+
+  -webkit-tap-highlight-color: transparent;
+
+  /* 뷰포트가 변경이 되면 자동으로 폰트 크기가 조절되는 걸 방지해주는 비표준 css 속성 */
+  /* 100%값을 주면 모든 디바이스에서 동일한 텍스트 크기를 만들수 있다.  */
+  /* 퍼센트값을 낮게줘서 디바이스별로 동일하게 작게 줄 수도 있다.  */
+  /* 비표준 속성이기 때문에 프리픽스를 사용해야 한다. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+
+
+  /* default 로 하면 기본 커서인 화살표로 된다. */
+  cursor: default;
+
+  /*라인박스의 높이를 설정해주는 속성 글자의 높이를 정해준다. */
+  line-height: 1.5;
+
+  /* 텍스트가 박스를 넘지 않게끔에서 레이아웃이 깨지지 않아서 문자열의 줄 바꿈 내용을 정해주는 속성 */
+  /* 속성 값들은 normal(두 단어 사이의 공백만 분리해주는 속성값), break-word(최소 콘텐츠 고유 크기를 문자열이 넘지 않게끔 해주는 속성값. 단어들도 보장해준다.) 가 자주 쓰인다. */
+  overflow-wrap: break-word;
+
+  /* 탭했을때의 너비를 정해주는 속성*/
+  /* 파이어폭스에서 일부 지원하는 버전이 있기 때문에 파이어폭스 프리픽스 사용 */
+  -moz-tab-size: 4;
+  tab-size: 4;
+
+  --font-en: 'Montserrat', 'Noto Sans KR', sans-serif;
+  --font-kr: 'Noto Sans KR', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+ul {
+  list-style: none;
+}
+
+/* 세팅 */
+body {
+  /* 기본적인 국문의 폰트패밀리 적용 */
+  font-family: "TTHoves", 'NanumSquare';
+  color: #222222;
+  letter-spacing: -0.025em;
+}
+
+fieldset {
+  border: 0;
+}

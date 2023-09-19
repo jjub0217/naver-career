@@ -1,0 +1,857 @@
+.container {
+  margin-top: 64px;
+}
+
+.group-title {
+  .headline {
+    padding-top: 95px;
+    padding-bottom: 20px;
+    font-size: 64px;
+    line-height: 71px;
+
+    @include tablet {
+      font-size: 36px;
+      padding-top: 59px;
+      padding-bottom: 11px;
+      line-height: 50px;
+    }
+  }
+
+  .headline-sm {
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: -0.44px;
+    font-weight: bold;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: -0.32px;
+    }
+  }
+
+  .link-more {
+    position: relative;
+    top: -5px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    letter-spacing: -0.36px;
+    text-decoration: underline;
+  }
+}
+
+
+.affiliation {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.28px;
+  color: #000;
+  font-family: "NanumSquare", "sans-serif";
+  display: flex;
+  align-items: center;
+
+  span:first-child {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      background: #000;
+      width: 1px;
+      height: 11px;
+      margin: 0 10px;
+      margin-top: -3px;
+    }
+  }
+}
+
+.swiper {
+  .control-area {
+
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+
+    .btn,
+    .swiper-button-disabled {
+      background: url("../images/sp_pc.png") no-repeat;
+      background-position: -187px -172px;
+      background-size: 328px 205px;
+      height: 32px;
+      width: 33px;
+    }
+
+    .swiper-button-disabled {
+      opacity: 0.5;
+    }
+
+    .btn-next {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+
+.section-visual {
+  // margin-top: 64px;
+  position: relative;
+
+
+  @include mobile {
+    .video-box {
+      // padding-bottom: 100%;
+      padding-bottom: calc((199/320)*100%);
+      position: relative;
+
+      video {
+        position: absolute;
+        top: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+      }
+    }
+  }
+
+
+
+
+  video {
+    object-fit: cover;
+    height: 544px;
+    width: 100%;
+  }
+
+
+
+  .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    letter-spacing: -2.4px;
+    font-weight: 800;
+    display: flex;
+    white-space: nowrap;
+    color: #fff;
+
+    br {
+      display: none;
+    }
+
+    @include tablet {
+      font-size: 60px;
+    }
+
+    @include mobile {
+      font-size: 40px;
+      text-align: center;
+
+      br {
+        display: block;
+      }
+    }
+
+
+    span {
+      display: block;
+      // background: #f00;
+      // width: 50%;
+      // overflow: hidden;
+      width: 0%;
+      overflow: hidden;
+      opacity: 0;
+
+      @include mobile {
+        width: 100%;
+      }
+
+    }
+  }
+
+  .swiper-slide-active {
+    .text-box {
+      span {
+        width: 100%;
+        opacity: 1;
+        transition: width 0.8s 0.8s, opacity 0.5s 0.8s;
+      }
+    }
+  }
+}
+
+
+.section-search {
+  // position: relative;
+  // z-index: 2;
+
+  // 이렇게 하면 그냥 자기 위치에서 붕 띄워지고, 브라우저 가로 꽉 차게 된다.
+  // 그래서 바로 밑에 형제 요소인 section-teams 가 뒤로 들어가게 된다.
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  @include tablet {
+    position: relative;
+  }
+
+
+
+
+  //.form-area {
+  // border: none;
+  // position: absolute;
+  // top: -30px;
+  // left: 100px;
+  // right: 100px;
+
+  // max-width: 1230px;
+  // margin: 0 auto;
+  // display: flex;
+  // background-color: #fff;
+  // }
+
+  // .form-area
+  .form-group1 {
+    // position: absolute;
+    // top: -30px;
+    // left: 100px;
+    // right: 100px;
+    // margin: 0 auto;
+
+
+    // .form-area 높이의 반만큼만 올려라.
+    transform: translateY(-50%);
+    // background-color: #fff;
+
+
+    @include tablet {
+      display: none;
+    }
+
+    .flex-group {
+      display: flex;
+      background: #fff;
+
+      // .group-area
+      .form-field {
+        display: flex;
+        align-items: center;
+        flex: 1;
+
+        .keyword {
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        select {
+          border: none;
+          padding: 0 25px 0 9px;
+          color: #d0d0d0;
+          font-size: 14px;
+          font-weight: bold;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
+          background-image: url("../images/ico_arrow_down.png");
+          // 여기서 왜 calc 썼을까?
+          // 100% 에서 padding이 오른쪽이 25 인데, 25의 반에서, 이미지 가로 크기 고혀새어 9픽셀을 뺀거다.
+          background-position: calc(100% - 9px) center;
+          background-repeat: no-repeat;
+          background-size: 8px 5px;
+          flex: 1;
+          outline: none;
+          // background: transparent;
+
+          option:disabled {
+            display: none;
+          }
+        }
+
+        label {
+          display: flex;
+          align-items: center;
+          gap: 28px;
+          margin-right: 10px;
+          padding-left: 21px;
+          font-size: 14px;
+
+          &::before {
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            background: url("../images/sp_pc.png") no-repeat;
+            background-position: -245px -40px;
+            background-size: 328px 205px;
+
+          }
+        }
+
+        input {
+          border: none;
+          outline: none;
+          font-size: 14px;
+          font-weight: bold;
+          flex: 1;
+          line-height: 54px;
+          // background: transparent;
+
+          &::placeholder {
+            color: #d0d0d0;
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .btn-search {
+    width: 97px;
+    height: 54px;
+    line-height: 54px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+
+    &.mo {
+      display: none;
+
+      @include tablet {
+        display: block;
+        height: 42px;
+        line-height: 1;
+        padding-left: 10px;
+        margin-top: 22px;
+        font-weight: normal;
+        text-align: left;
+        width: 100%;
+        color: #696868;
+        background-color: #ebebeb;
+      }
+    }
+  }
+
+
+}
+
+
+
+.section-teams {
+  background-color: #fafafa;
+  position: relative;
+  padding-bottom: 89px;
+
+  @include tablet {
+    padding-bottom: 50px;
+  }
+
+  .teams-list {
+    padding-top: 70px;
+
+    @include tablet {
+      padding-top: 30px;
+
+    }
+
+    .teams-item {
+      line-height: 60px;
+
+      .inner2 {
+        @include tablet {
+          margin: 0;
+          padding: 0;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+
+          @include tablet {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 16px 0;
+          }
+
+          >span {
+            flex: 1;
+          }
+
+          .title {
+            font-size: 38px;
+            letter-spacing: -0.34px;
+            font-weight: normal;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1;
+
+            @include tablet {
+              font-size: 24px;
+              line-height: 38px;
+            }
+          }
+
+          .count {
+            font-size: 15px;
+            letter-spacing: -0.3px;
+            margin-left: 18px;
+            position: relative;
+
+            &:after {
+              content: "";
+              position: absolute;
+              top: 0px;
+              left: 14px;
+              background: url("../images/sp_pc.png");
+              background-position: -176px -105px;
+              background-size: 328px 205px;
+              width: 9px;
+              height: 9px;
+            }
+          }
+
+          .desc {
+            font-size: 22px;
+
+            @include tablet {
+              font-size: 16px;
+              line-height: 26px;
+            }
+          }
+
+        }
+      }
+
+
+
+
+      &:hover {
+        background-color: #eee;
+      }
+
+
+    }
+  }
+
+
+
+
+
+}
+
+.section-people {
+  overflow: hidden;
+
+  .swiper {
+    padding-top: 68px;
+    overflow: initial;
+
+    @include tablet {
+      padding-top: 25px;
+    }
+
+    .swiper-wrapper {
+      .swiper-slide {
+        .image-box {
+          // height: 520px;
+          // overflow: hidden;
+          // margin: 0 auto;
+
+
+          // 아래처럼 하면 .image-box 의 width 만큼 padding-bottom 을 준것이다. 
+          background: #f00;
+          // padding-bottom: 100%;
+
+          // 이렇게 하면 원본 사진의 비율이랑 같게 된다. 
+          padding-bottom: calc((520/1097)*100%);
+
+          // 그리고 
+          position: relative;
+
+          @include tablet {
+            padding-bottom: 100%;
+          }
+
+          img {
+
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+            // .image-box 에서의 "그리고" , 아래처럼 주면 image-box 기준으로 ab top0 으로 해서 image-box 에 딱 달라붙게 된다.
+            position: absolute;
+            top: 0;
+          }
+        }
+
+        .text-box {
+          padding-top: 29px;
+
+          @include tablet {
+            .headline-sm {
+              font-size: 18px;
+              font-weight: bold;
+              padding-top: 21px;
+            }
+          }
+        }
+
+        .interview {
+          position: relative;
+          top: -5px;
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: normal;
+          letter-spacing: -0.36px;
+          text-decoration: underline;
+
+          @include tablet {
+            display: none;
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+}
+
+.section-benefits {
+
+  .swiper {
+    padding-top: 68px;
+
+    @include tablet {
+      padding-top: 25px;
+    }
+
+    .swiper-wrapper {
+      .swiper-slide {
+
+        a {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .image-box {
+          // height: 380px;
+          background: #f00;
+          position: relative;
+          padding-bottom: 100%;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .text-box {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          @include tablet {
+            gap: 5px;
+          }
+
+          .title {
+            font-size: 25px;
+
+            @include tablet {
+              font-size: 18px;
+            }
+          }
+
+          .desc {
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @include desktop {
+              font-size: 14px;
+
+              br {
+                display: none;
+              }
+            }
+
+            @include mobile {
+              br {
+                display: block;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-apply {
+
+  @include tablet {
+    padding: 71px 0 99px;
+  }
+
+  .headline {
+    font-size: 25px;
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+  }
+
+  .link-apply {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 200px;
+
+    @include tablet {
+      font-size: 16px;
+      margin-top: 16px;
+    }
+
+    &:after {
+      content: "";
+      background: url("../images/sp_pc.png") no-repeat;
+      background-size: 328px 205px;
+      background-position: -76px -172px;
+      height: 32px;
+      width: 33px;
+    }
+  }
+}
+
+.section-search-modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow-y: auto;
+
+  .inner2 {
+    margin: 0;
+    padding: 20px 32px;
+    width: 100%;
+
+    .modal-close {
+      background-image: url(../images/sp_mo.png);
+      background-size: 195px 181px;
+      background-position: -110px -28px;
+      width: 14px;
+      height: 14px;
+    }
+
+    .input-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #d0d0d0;
+      position: relative;
+      padding-top: 20px;
+      margin-bottom: 10px;
+
+      input {
+        width: 100%;
+        border: none;
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: -0.28px;
+
+        &:focus {
+          outline: none;
+        }
+
+
+        &::placeholder {
+          color: #ccc;
+        }
+
+      }
+
+      .search-btn {
+        position: absolute;
+        right: 0;
+        background-image: url(../images/sp_pc.png);
+        background-size: 328px 205px;
+        background-position: -268px -40px;
+        width: 15px;
+        height: 15px;
+      }
+
+
+    }
+
+    .title {
+      line-height: 26px;
+      letter-spacing: -0.28px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .filter-group {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+    }
+  }
+
+  &.on {
+    display: flex;
+
+    .filter-list {
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .filter-item {
+      font-family: "NanumSquare", sans-serif;
+      font-size: 14px;
+
+      .item-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &::before {
+          content: "";
+          display: block;
+          background-image: url(../images/sp_pc.png);
+          background-size: 328px 205px;
+          background-position: -136px -93px;
+          width: 8px;
+          height: 5px;
+        }
+
+        &.on {
+          &::before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .category {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 8px;
+          height: 8px;
+          border: 1px solid #d0d0d0;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+        }
+      }
+
+      .sub-list {
+        display: none;
+
+        &.on {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 10px 0;
+          // display: block;
+          // background: #aaa;
+          padding-left: 20px;
+
+          .sub-item {
+
+            .sub-item-title {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              &::before {
+                content: "";
+                display: block;
+                background-image: url(../images/sp_pc.png);
+                background-size: 328px 205px;
+                background-position: -136px -93px;
+                width: 8px;
+                height: 5px;
+              }
+
+
+            }
+
+            &.on {
+              .sub-item-title {
+                &::before {
+                  transform: rotate(180deg);
+                }
+
+              }
+            }
+
+            .item-list {
+              display: none;
+
+
+              &.on {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 0;
+                // display: block;
+                // background: skyblue;
+                padding-left: 20px;
+
+                button {
+                  // position: relative;
+
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+
+                  &::before {
+                    content: "";
+                    // position: absolute;
+                    // top: 8px;
+                    // left: 0;
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    border: 1px solid #d0d0d0;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                  }
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

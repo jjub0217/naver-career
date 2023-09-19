@@ -1,0 +1,295 @@
+/* footer */
+.footer {
+  background-color: #f2f2f2;
+
+  .inner1 {
+    max-width: 1920px;
+    width: 100%;
+    padding: 25px 85px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include desktop {
+      padding: 25px 22px;
+      display: block;
+    }
+
+    .footer-logo {
+      display: flex;
+      height: inherit;
+
+      @include tablet {
+        display: inline-block;
+      }
+
+      a {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: -0.32px;
+
+        @include tablet {
+          font-size: 15px;
+
+        }
+      }
+    }
+
+    .policy {
+      font-size: 14px;
+      color: #909090;
+      font-weight: bold;
+
+      @include tablet {
+        margin-left: 21px;
+      }
+    }
+
+    .related {
+      margin-left: auto;
+      position: relative;
+      width: 280px;
+      height: inherit;
+      line-height: 32px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #b8b8b8;
+
+      @include tablet {
+        margin-left: 0;
+        margin-top: auto;
+        width: 100%;
+      }
+
+      .title {
+        width: inherit;
+        line-height: 32px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include tablet {
+          font-size: 12px;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          background: url("../images/sp_pc.png") no-repeat;
+          background-size: 328px 205px;
+          background-position: -122px -93px;
+          width: 10px;
+          height: 6px;
+        }
+      }
+
+      .related-list {
+        display: none;
+      }
+
+      &.on {
+        background: #fff;
+        border: none;
+
+        .title {
+          padding: 0 5px 0 10px;
+
+
+
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+
+        .related-list {
+          display: block;
+          position: absolute;
+          width: inherit;
+          padding: 0 10px;
+          bottom: 10px;
+          transform: translateY(-27px);
+
+          background: #fff;
+          z-index: 1;
+          overflow-y: scroll;
+
+          .related-item {
+            font-size: 18px;
+            line-height: 42px;
+
+            @include tablet {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+
+
+    .related-list {
+      // position: absolute;
+      // width: inherit;
+      // left: -1px;
+      // bottom: 0;
+      // transform: translateY(-27px);
+      // border: 1px solid #808789;
+      // border-bottom: 1px solid #b8b8b8;
+      // background: #fff;
+      // z-index: 1;
+      // height: 225px;
+      // overflow-y: scroll;
+      // // opacity: 0;
+      // display: none;
+
+      // .related-item {
+      //   .link-related {
+      //     display: block;
+      //     padding: 5px 0 5px 10px;
+      //     font-size: 12px;
+      //     text-decoration: none;
+      //     color: #686868;
+
+      //     &:hover {
+      //       background: #ececec;
+      //     }
+      //   }
+      // }
+    }
+
+  }
+}
+
+
+// 모바일
+// @media screen and (max-width: 768px) {
+
+//   .footer {
+//     background-color: #f2f2f2;
+
+//     .inner1 {
+//       padding: 25px 22px;
+//       // min-width: 320px;
+//       max-width: 1320px;
+//       gap: 20px;
+//       flex-wrap: wrap;
+
+//       .footer-logo {
+//         display: flex;
+//         height: inherit;
+
+//         a {
+//           font-size: 15px;
+//           line-height: 32px;
+//           letter-spacing: -0.32px;
+//         }
+//       }
+
+//       .policy {
+//         font-size: 14px;
+//       }
+
+//       .related {
+//         position: relative;
+//         width: 100%;
+//         height: inherit;
+//         line-height: 32px;
+//         padding-bottom: 5px;
+//         margin: 0;
+//         // border: none;
+//         border-bottom: 1px solid #b8b8b8;
+
+//         .title {
+//           width: inherit;
+//           line-height: 32px;
+//           font-size: 12px;
+//           text-align: left;
+
+//           align-items: center;
+//           justify-content: space-between;
+
+
+//           &:after {
+//             content: "";
+//             display: block;
+//             background: url("../images/sp_pc.png") no-repeat;
+//             background-size: 328px 205px;
+//             background-position: -122px -93px;
+//             width: 10px;
+//             height: 6px;
+//           }
+//         }
+
+//         .related-list {
+//           display: none;
+//         }
+
+//         &.on {
+//           background: #fff;
+//           border: none;
+
+//           .title {
+//             padding: 0 5px 0 10px;
+//             font-size: 12px;
+
+//             &:after {
+//               transform: rotate(180deg);
+//             }
+//           }
+
+//           .related-list {
+//             display: block;
+//             position: absolute;
+//             width: inherit;
+//             padding: 0 10px;
+//             bottom: 10px;
+//             transform: translateY(-27px);
+
+//             background: #fff;
+//             z-index: 1;
+//             overflow-y: scroll;
+
+//             .related-item {
+//               font-size: 12px;
+//               line-height: 42px;
+//             }
+//           }
+//         }
+//       }
+
+
+
+//       .related-list {
+//         // position: absolute;
+//         // width: inherit;
+//         // left: -1px;
+//         // bottom: 0;
+//         // transform: translateY(-27px);
+//         // border: 1px solid #808789;
+//         // border-bottom: 1px solid #b8b8b8;
+//         // background: #fff;
+//         // z-index: 1;
+//         // height: 225px;
+//         // overflow-y: scroll;
+//         // // opacity: 0;
+//         // display: none;
+
+//         // .related-item {
+//         //   .link-related {
+//         //     display: block;
+//         //     padding: 5px 0 5px 10px;
+//         //     font-size: 12px;
+//         //     text-decoration: none;
+//         //     color: #686868;
+
+//         //     &:hover {
+//         //       background: #ececec;
+//         //     }
+//         //   }
+//         // }
+//       }
+
+//     }
+//   }
+// }
