@@ -68,6 +68,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-size: 14px;
 
         @include tablet {
           font-size: 12px;
@@ -128,35 +129,6 @@
 
 
 
-    .related-list {
-      // position: absolute;
-      // width: inherit;
-      // left: -1px;
-      // bottom: 0;
-      // transform: translateY(-27px);
-      // border: 1px solid #808789;
-      // border-bottom: 1px solid #b8b8b8;
-      // background: #fff;
-      // z-index: 1;
-      // height: 225px;
-      // overflow-y: scroll;
-      // // opacity: 0;
-      // display: none;
-
-      // .related-item {
-      //   .link-related {
-      //     display: block;
-      //     padding: 5px 0 5px 10px;
-      //     font-size: 12px;
-      //     text-decoration: none;
-      //     color: #686868;
-
-      //     &:hover {
-      //       background: #ececec;
-      //     }
-      //   }
-      // }
-    }
 
   }
 }

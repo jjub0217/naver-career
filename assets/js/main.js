@@ -1,38 +1,10 @@
 $(function () {
-  
-  // $('.lang-list .lang-item a').click(function(e){
-  //   e.preventDefault()
-  //   if($(this).hasClass('on')){
-  //     $(this).removeClass('on')
-  //   }else{
-  //     $(this).addClass('on')
-  //     $(this).parent().siblings().children().removeClass('on')
-  //   }
-  // })
-  $('.header .lang-area').click(function(){
+
+  $('.header .group-flex .lang-area').click(function(){
     console.log('누름');
     $(this).toggleClass('on')
   }) 
-  
 
-
-  // $('.gnb .nav-list .nav').mouseover(function(e){
-  //   // let windowWidth = $(window).width();
-  //   // if(windowWidth >= 768) {
-  //     // $(this).siblings().addClass('on');
-  //     // $(this).siblings().mouseleave(function(){
-  //     //   $(this).removeClass('on');
-  //     // })
-  //     // }
-  //     // return
-  //     console.log(
-  //     $(this).siblings('.sub-list').length)
-  //     // 이벤트의 타켓인 this의 형제에 sub-list 가 있다면 length 는 1 이 나오고, 없다면 0 이 나온다.
-  //     if($(this).siblings('.sub-list').length){
-  //       $(this).siblings().addClass('on');
-  //     $('.gnb').addClass('on')
-  //     }
-  // })
   $('.gnb .nav-item').hover(function(e){
       console.log(
       $(this).find('.sub-list').length)
@@ -45,6 +17,13 @@ $(function () {
   },function(){
       $(this).find('.sub-list').removeClass('on');
       $('.gnb').removeClass('on')
+  })
+
+  $('.mo_gnb_inner .lang-area').click(function(e){
+    if($(this).find(".text").length){
+        $(this).find('.text').toggleClass("on")
+        $(this).siblings().find('.text').removeClass('on')
+    }
   })
 
   $('.mo_gnb_inner .nav-item').click(function(){
@@ -148,7 +127,7 @@ $(function () {
       },
     },
     slidesPerView: 1,
-    spaceBetween: 40,
+    spaceBetween: 30,
 
     navigation : {
       nextEl: ".section-benefits .btn-next",

@@ -2,6 +2,22 @@
   margin-top: 64px;
 }
 
+.headline-sm {
+  display: inline;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: -0.44px;
+  font-weight: bold;
+  padding-right: 30px;
+
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.32px;
+  }
+}
+
 .group-title {
   .headline {
     padding-top: 95px;
@@ -17,27 +33,23 @@
     }
   }
 
-  .headline-sm {
-    font-size: 22px;
-    line-height: 32px;
-    letter-spacing: -0.44px;
-    font-weight: bold;
-
-    @include tablet {
-      font-size: 16px;
-      line-height: 26px;
-      letter-spacing: -0.32px;
-    }
-  }
-
   .link-more {
     position: relative;
-    top: -5px;
     font-size: 14px;
     line-height: 18px;
     font-weight: normal;
     letter-spacing: -0.36px;
-    text-decoration: underline;
+    vertical-align: top;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #000;
+    }
   }
 }
 
@@ -70,7 +82,7 @@
 .swiper {
   .control-area {
 
-    padding-top: 20px;
+    padding-top: 30px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -161,9 +173,6 @@
 
     span {
       display: block;
-      // background: #f00;
-      // width: 50%;
-      // overflow: hidden;
       width: 0%;
       overflow: hidden;
       opacity: 0;
@@ -201,34 +210,10 @@
     position: relative;
   }
 
-
-
-
-  //.form-area {
-  // border: none;
-  // position: absolute;
-  // top: -30px;
-  // left: 100px;
-  // right: 100px;
-
-  // max-width: 1230px;
-  // margin: 0 auto;
-  // display: flex;
-  // background-color: #fff;
-  // }
-
-  // .form-area
   .form-group1 {
-    // position: absolute;
-    // top: -30px;
-    // left: 100px;
-    // right: 100px;
-    // margin: 0 auto;
-
 
     // .form-area 높이의 반만큼만 올려라.
     transform: translateY(-50%);
-    // background-color: #fff;
 
 
     @include tablet {
@@ -239,7 +224,6 @@
       display: flex;
       background: #fff;
 
-      // .group-area
       .form-field {
         display: flex;
         align-items: center;
@@ -301,7 +285,6 @@
           font-weight: bold;
           flex: 1;
           line-height: 54px;
-          // background: transparent;
 
           &::placeholder {
             color: #d0d0d0;
@@ -364,9 +347,12 @@
     }
 
     .teams-item {
+      padding: 20px 0;
       line-height: 60px;
 
       .inner2 {
+        padding: 0;
+
         @include tablet {
           margin: 0;
           padding: 0;
@@ -462,13 +448,8 @@
     .swiper-wrapper {
       .swiper-slide {
         .image-box {
-          // height: 520px;
-          // overflow: hidden;
-          // margin: 0 auto;
-
 
           // 아래처럼 하면 .image-box 의 width 만큼 padding-bottom 을 준것이다. 
-          background: #f00;
           // padding-bottom: 100%;
 
           // 이렇게 하면 원본 사진의 비율이랑 같게 된다. 
@@ -507,12 +488,21 @@
 
         .interview {
           position: relative;
-          top: -5px;
           font-size: 14px;
           line-height: 18px;
           font-weight: normal;
           letter-spacing: -0.36px;
-          text-decoration: underline;
+          vertical-align: top;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #000;
+          }
 
           @include tablet {
             display: none;
@@ -530,7 +520,7 @@
 .section-benefits {
 
   .swiper {
-    padding-top: 68px;
+    padding-top: 55px;
 
     @include tablet {
       padding-top: 25px;
@@ -546,8 +536,6 @@
         }
 
         .image-box {
-          // height: 380px;
-          background: #f00;
           position: relative;
           padding-bottom: 100%;
 
@@ -605,6 +593,8 @@
 }
 
 .section-apply {
+  padding-top: 95px;
+  padding-bottom: 102px;
 
   @include tablet {
     padding: 71px 0 99px;
@@ -625,6 +615,7 @@
     align-items: center;
     gap: 10px;
     max-width: 200px;
+    margin-top: 18px;
 
     @include tablet {
       font-size: 16px;

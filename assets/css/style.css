@@ -151,7 +151,6 @@ fieldset {
   }
 }
 
-/* header */
 .header {
   position: fixed;
   top: 0;
@@ -166,10 +165,14 @@ fieldset {
   max-width: 1920px;
   width: 100%;
   height: inherit;
-  padding: 0 85px;
+  padding: 0 104px 0 98px;
   margin: 0 auto;
   gap: 20px;
-  /* nav */
+}
+@media screen and (max-width: 1229px) {
+  .header .inner1 {
+    padding: 0 22px;
+  }
 }
 .header .inner1 .logo {
   display: flex;
@@ -191,11 +194,6 @@ fieldset {
     background-position: 0px 0px;
     width: 160px;
     height: 23px;
-  }
-}
-@media screen and (max-width: 1229px) {
-  .header .inner1 {
-    padding: 0 22px;
   }
 }
 .header .inner1 .gnb {
@@ -229,7 +227,6 @@ fieldset {
 }
 .header .inner1 .gnb .nav-list {
   display: flex;
-  gap: 20px;
   font-size: 17px;
   height: 100%;
 }
@@ -268,7 +265,7 @@ fieldset {
   height: inherit;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   margin-left: auto;
 }
 @media screen and (max-width: 1229px) {
@@ -292,6 +289,7 @@ fieldset {
 .header .inner1 .group-flex .lang-area .curr span {
   width: 40px;
   text-align: center;
+  font-size: 17px;
 }
 .header .inner1 .group-flex .lang-area .curr:after {
   display: block;
@@ -351,7 +349,7 @@ fieldset {
   .header .inner1 .mo_gnb_inner.isAct .nav-list .nav-item .hasSubMenu {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
   .header .inner1 .mo_gnb_inner.isAct .nav-list .nav-item .hasSubMenu::after {
     content: "";
@@ -384,7 +382,7 @@ fieldset {
     content: "";
     display: block;
     height: 1px;
-    margin: 20px 0;
+    margin: 15px 0;
     background-color: #d0d0d0;
   }
   .header .inner1 .mo_gnb_inner.isAct .util-list {
@@ -398,7 +396,7 @@ fieldset {
     flex-direction: column;
     font-size: 17px;
   }
-  .header .inner1 .mo_gnb_inner.isAct .lang-area .text:before {
+  .header .inner1 .mo_gnb_inner.isAct .lang-area .lang-item .text:before {
     content: "";
     margin-right: 10px;
     display: inline-block;
@@ -407,7 +405,7 @@ fieldset {
     border-radius: 50%;
     border: 1px solid #d0d0d0;
   }
-  .header .inner1 .mo_gnb_inner.isAct .lang-area .text.on:before {
+  .header .inner1 .mo_gnb_inner.isAct .lang-area .lang-item .text.on:before {
     content: "";
     margin-right: 10px;
     display: inline-block;
@@ -427,8 +425,8 @@ fieldset {
     background: url("../images/sp_mo.png") no-repeat;
     background-size: 195px 181px;
     background-position: -85px -28px;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     margin-left: auto;
   }
   .header .inner1 .buttonBugger.isAct {
@@ -507,6 +505,7 @@ fieldset {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 14px;
 }
 @media screen and (max-width: 1024px) {
   .footer .inner1 .related .title {
@@ -555,8 +554,25 @@ fieldset {
     font-size: 12px;
   }
 }
+
 .container {
   margin-top: 64px;
+}
+
+.headline-sm {
+  display: inline;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: -0.44px;
+  font-weight: bold;
+  padding-right: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .headline-sm {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.32px;
+  }
 }
 
 .group-title .headline {
@@ -573,27 +589,22 @@ fieldset {
     line-height: 50px;
   }
 }
-.group-title .headline-sm {
-  font-size: 22px;
-  line-height: 32px;
-  letter-spacing: -0.44px;
-  font-weight: bold;
-}
-@media screen and (max-width: 1024px) {
-  .group-title .headline-sm {
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: -0.32px;
-  }
-}
 .group-title .link-more {
   position: relative;
-  top: -5px;
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
   letter-spacing: -0.36px;
-  text-decoration: underline;
+  vertical-align: top;
+}
+.group-title .link-more::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #000;
 }
 
 .affiliation {
@@ -620,7 +631,7 @@ fieldset {
 }
 
 .swiper .control-area {
-  padding-top: 20px;
+  padding-top: 30px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -840,7 +851,11 @@ fieldset {
   }
 }
 .section-teams .teams-list .teams-item {
+  padding: 20px 0;
   line-height: 60px;
+}
+.section-teams .teams-list .teams-item .inner2 {
+  padding: 0;
 }
 @media screen and (max-width: 1024px) {
   .section-teams .teams-list .teams-item .inner2 {
@@ -919,7 +934,6 @@ fieldset {
   }
 }
 .section-people .swiper .swiper-wrapper .swiper-slide .image-box {
-  background: #f00;
   padding-bottom: 47.4020054695%;
   position: relative;
 }
@@ -948,12 +962,20 @@ fieldset {
 }
 .section-people .swiper .swiper-wrapper .swiper-slide .interview {
   position: relative;
-  top: -5px;
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
   letter-spacing: -0.36px;
-  text-decoration: underline;
+  vertical-align: top;
+}
+.section-people .swiper .swiper-wrapper .swiper-slide .interview::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #000;
 }
 @media screen and (max-width: 1024px) {
   .section-people .swiper .swiper-wrapper .swiper-slide .interview {
@@ -962,7 +984,7 @@ fieldset {
 }
 
 .section-benefits .swiper {
-  padding-top: 68px;
+  padding-top: 55px;
 }
 @media screen and (max-width: 1024px) {
   .section-benefits .swiper {
@@ -975,7 +997,6 @@ fieldset {
   gap: 30px;
 }
 .section-benefits .swiper .swiper-wrapper .swiper-slide .image-box {
-  background: #f00;
   position: relative;
   padding-bottom: 100%;
 }
@@ -1024,6 +1045,10 @@ fieldset {
   }
 }
 
+.section-apply {
+  padding-top: 95px;
+  padding-bottom: 102px;
+}
 @media screen and (max-width: 1024px) {
   .section-apply {
     padding: 71px 0 99px;
@@ -1043,6 +1068,7 @@ fieldset {
   align-items: center;
   gap: 10px;
   max-width: 200px;
+  margin-top: 18px;
 }
 @media screen and (max-width: 1024px) {
   .section-apply .link-apply {

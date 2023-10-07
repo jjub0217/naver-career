@@ -5,17 +5,6 @@
 // 1025 ~ 1229
 $desktop: 1229px;
 
-
-// 768 ~ 1024
-$tablet: 1024px;
-
-
-
-// 320 ~ 767
-$mobile: 767px;
-
-
-
 @mixin desktop {
 
   // 1229 이하를 꾸미는거다. 
@@ -24,6 +13,11 @@ $mobile: 767px;
   }
 }
 
+
+
+// 768 ~ 1024
+$tablet: 1024px;
+
 @mixin tablet {
 
   // 1024 이하를 꾸미는거다. 
@@ -31,6 +25,11 @@ $mobile: 767px;
     @content;
   }
 }
+
+
+
+// 320 ~ 767
+$mobile: 767px;
 
 @mixin mobile {
 
