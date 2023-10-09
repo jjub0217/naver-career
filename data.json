@@ -1,115 +1,138 @@
 {
   "items": [
     {
-      "Tech": [
+      "filterItemTitle": "Tech",
+      "depth1SubList": [
         {
-          "Software Development": [
+          "depth1SubItemTitle": "Software Development",
+          "depth2SubItemTitles": [
             "Frontend",
             "Android",
             "IOS"
           ]
         },
         {
-          " Hardware Development": [
+          "depth1SubItemTitle": "Hardware Development",
+          "depth2SubItemTitles": [
             "Hardware"
           ]
         },
         {
-          "Infra Engineering": [
+          "depth1SubItemTitle": "Infra Engineering",
+          "depth2SubItemTitles": [
             "Infra Engineering",
             "Data Center Engineering"
           ]
         },
         {
-          "Security": [
+          "depth1SubItemTitle": "Security",
+          "depth2SubItemTitles": [
             "Security"
           ]
         },
         {
-          "Tech Operations": [
+          "depth1SubItemTitle": "Tech Operations",
+          "depth2SubItemTitles": [
             "Tech Staff",
             "QA"
           ]
         },
         {
-          "공통": [
+          "depth1SubItemTitle": "공통",
+          "depth2SubItemTitles": [
             "공통"
           ]
         }
       ]
     },
     {
-      "Design": [
+      "filterItemTitle": "Design",
+      "depth1SubList": [
         {
-          "Product Design": [
+          "depth1SubItemTitle": "Product Design",
+          "depth2SubItemTitles": [
             "Product Design"
           ]
         },
         {
-          "Visual Comm. & Brand Design": [
+          "depth1SubItemTitle": "Visual Comm. & Brand Design",
+          "depth2SubItemTitles": [
             "Visual Comm. & Brand Design"
           ]
         },
         {
-          "Infra Engineering": [
+          "depth1SubItemTitle": "Infra Engineering",
+          "depth2SubItemTitles": [
             "Interactive Design"
           ]
         },
         {
-          "Experience Insight & Planning": [
+          "depth1SubItemTitle": "Experience Insight & Planning",
+          "depth2SubItemTitles": [
             "Experience Insight & Planning"
           ]
         },
         {
-          "Content Writing": [
+          "depth1SubItemTitle": "Content Writing",
+          "depth2SubItemTitles": [
             "Content Writing"
           ]
         },
         {
-          "공통": [
+          "depth1SubItemTitle": "공통",
+          "depth2SubItemTitles": [
             "공통"
           ]
         }
       ]
     },
     {
-      "Service & Business": [
+      "filterItemTitle": "Service & Business",
+      "depth1SubList": [
         {
-          "Product Development": [
+          "depth1SubItemTitle": "Product Development",
+          "depth2SubItemTitles": [
             "Product Development"
           ]
         },
         {
-          "Content Development": [
+          "depth1SubItemTitle": "Content Development",
+          "depth2SubItemTitles": [
             "Content Development"
           ]
         },
         {
-          "Business Development": [
+          "depth1SubItemTitle": "Business Development",
+          "depth2SubItemTitles": [
             "Business Development"
           ]
         },
         {
-          "Trust&Safety": [
+          "depth1SubItemTitle": "Trust&Safety",
+          "depth2SubItemTitles": [
             "Trust&Safety"
           ]
         },
         {
-          "어카운트/세일즈": [
+          "depth1SubItemTitle": "어카운트/세일즈",
+          "depth2SubItemTitles": [
             "어카운트/세일즈"
           ]
         },
         {
-          "공통": [
+          "depth1SubItemTitle": "공통",
+          "depth2SubItemTitles": [
             "공통"
           ]
         }
       ]
     },
     {
-      "Corporate": [
+      "filterItemTitle": "Corporate",
+      "depth1SubList": [
         {
-          "Marketing": [
+          "depth1SubItemTitle": "Marketing",
+          "depth2SubItemTitles": [
             "Marketing",
             "Brand Planning",
             "Content Creative",
@@ -118,7 +141,8 @@
           ]
         },
         {
-          "Finance": [
+          "depth1SubItemTitle": "Finance",
+          "depth2SubItemTitles": [
             "재무기획",
             "회계",
             "세무",
@@ -127,7 +151,8 @@
           ]
         },
         {
-          "Service Infra": [
+          "depth1SubItemTitle": "Service Infra",
+          "depth2SubItemTitles": [
             "소싱",
             "운영관리",
             "빌링",
@@ -136,12 +161,14 @@
           ]
         },
         {
-          "Partner Growth Support": [
+          "depth1SubItemTitle": "Partner Growth Support",
+          "depth2SubItemTitles": [
             "Partner Growth Support"
           ]
         },
         {
-          "Corporate Development": [
+          "depth1SubItemTitle": "Corporate Development",
+          "depth2SubItemTitles": [
             "투자",
             "Investor Relations",
             "Corporate Strategy",
@@ -149,31 +176,36 @@
           ]
         },
         {
-          "Compliance": [
+          "depth1SubItemTitle": "Compliance",
+          "depth2SubItemTitles": [
             "Risk Management",
             "내부감사"
           ]
         },
         {
-          "Legal": [
+          "depth1SubItemTitle": "Legal",
+          "depth2SubItemTitles": [
             "법무",
             "지식재산"
           ]
         },
         {
-          "Privacy": [
+          "depth1SubItemTitle": "Privacy",
+          "depth2SubItemTitles": [
             "개인정보보호",
             "통신비밀보호"
           ]
         },
         {
-          "Communication": [
+          "depth1SubItemTitle": "Communication",
+          "depth2SubItemTitles": [
             "Risk Management",
             "내부감사"
           ]
         },
         {
-          "Compliance": [
+          "depth1SubItemTitle": "Compliance",
+          "depth2SubItemTitles": [
             "Strategic Communication",
             "산업및정책연구",
             "Corporate Experience",
@@ -181,7 +213,8 @@
           ]
         },
         {
-          "HR": [
+          "depth1SubItemTitle": "HR",
+          "depth2SubItemTitles": [
             "Human Resources",
             "Employee Relations",
             "Talent Acquisition",
@@ -190,13 +223,15 @@
           ]
         },
         {
-          "Assist": [
+          "depth1SubItemTitle": "Assist",
+          "depth2SubItemTitles": [
             "채용운영",
             "통번역"
           ]
         },
         {
-          "Assist": [
+          "depth1SubItemTitle": "Assist",
+          "depth2SubItemTitles": [
             "채용운영",
             "통번역"
           ]

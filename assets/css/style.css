@@ -1197,9 +1197,11 @@ fieldset {
   border-radius: 50%;
   -webkit-border-radius: 50%;
 }
-.section-search-modal.on .filter-item-title.on::before,
-.section-search-modal.on .depth1-sub-item-title.on::before {
-  transform: rotate(180deg);
+.section-search-modal.on .depth1-sub-item-all.on::before,
+.section-search-modal.on .depth2-sub-item-title.on::before,
+.section-search-modal.on .category.on::before {
+  background: #000;
+  border: 1px solid #000;
 }
 .section-search-modal.on .filter-item-title::before,
 .section-search-modal.on .depth1-sub-item-title::before {
@@ -1210,4 +1212,8 @@ fieldset {
   background-position: -136px -93px;
   width: 8px;
   height: 5px;
+}
+.section-search-modal.on .filter-item-title.on::before,
+.section-search-modal.on .depth1-sub-item-title.on::before {
+  transform: rotate(180deg);
 }
