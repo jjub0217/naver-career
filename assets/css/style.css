@@ -850,34 +850,34 @@ fieldset {
     padding-top: 30px;
   }
 }
-.section-teams .teams-list .teams-item {
+.section-teams .teams-item {
   padding: 20px 0;
   line-height: 60px;
 }
-.section-teams .teams-list .teams-item .inner2 {
+.section-teams .teams-item .inner2 {
   padding: 0;
 }
 @media screen and (max-width: 1024px) {
-  .section-teams .teams-list .teams-item .inner2 {
+  .section-teams .teams-item .inner2 {
     margin: 0;
     padding: 0;
   }
 }
-.section-teams .teams-list .teams-item .inner2 a {
+.section-teams .teams-item .inner2 a {
   display: flex;
   align-items: center;
 }
 @media screen and (max-width: 1024px) {
-  .section-teams .teams-list .teams-item .inner2 a {
+  .section-teams .teams-item .inner2 a {
     flex-direction: column;
     align-items: flex-start;
     padding: 16px 0;
   }
 }
-.section-teams .teams-list .teams-item .inner2 a > span {
+.section-teams .teams-item .inner2 a > span {
   flex: 1;
 }
-.section-teams .teams-list .teams-item .inner2 a .title {
+.section-teams .teams-item .inner2 a .title {
   font-size: 38px;
   letter-spacing: -0.34px;
   font-weight: normal;
@@ -886,18 +886,18 @@ fieldset {
   line-height: 1;
 }
 @media screen and (max-width: 1024px) {
-  .section-teams .teams-list .teams-item .inner2 a .title {
+  .section-teams .teams-item .inner2 a .title {
     font-size: 24px;
     line-height: 38px;
   }
 }
-.section-teams .teams-list .teams-item .inner2 a .count {
+.section-teams .teams-item .inner2 a .count {
   font-size: 15px;
   letter-spacing: -0.3px;
   margin-left: 18px;
   position: relative;
 }
-.section-teams .teams-list .teams-item .inner2 a .count:after {
+.section-teams .teams-item .inner2 a .count:after {
   content: "";
   position: absolute;
   top: 0px;
@@ -908,16 +908,16 @@ fieldset {
   width: 9px;
   height: 9px;
 }
-.section-teams .teams-list .teams-item .inner2 a .desc {
+.section-teams .teams-item .inner2 a .desc {
   font-size: 22px;
 }
 @media screen and (max-width: 1024px) {
-  .section-teams .teams-list .teams-item .inner2 a .desc {
+  .section-teams .teams-item .inner2 a .desc {
     font-size: 16px;
     line-height: 26px;
   }
 }
-.section-teams .teams-list .teams-item:hover {
+.section-teams .teams-item:hover {
   background-color: #eee;
 }
 
@@ -1114,7 +1114,7 @@ fieldset {
   justify-content: space-between;
   border-bottom: 1px solid #d0d0d0;
   position: relative;
-  padding-top: 20px;
+  padding-top: 25px;
   margin-bottom: 10px;
 }
 .section-search-modal .inner2 .input-box input {
@@ -1149,28 +1149,60 @@ fieldset {
   font-weight: bold;
 }
 .section-search-modal .inner2 .filter-group {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 35px;
+  padding-bottom: 10px;
 }
 .section-search-modal.on {
   display: flex;
 }
 .section-search-modal.on .filter-list {
-  padding-top: 10px;
+  padding-top: 18px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 19px;
 }
 .section-search-modal.on .filter-item {
   font-family: "NanumSquare", sans-serif;
   font-size: 14px;
 }
-.section-search-modal.on .filter-item .item-title {
+.section-search-modal.on .depth1-sub-list,
+.section-search-modal.on .depth2-sub-list {
+  display: none;
+}
+.section-search-modal.on .depth1-sub-list.on,
+.section-search-modal.on .depth2-sub-list.on {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  padding: 18px 0 0 0;
+  padding-left: 20px;
+}
+.section-search-modal.on .filter-item-title,
+.section-search-modal.on .depth1-sub-item-title,
+.section-search-modal.on .depth1-sub-item-all,
+.section-search-modal.on .depth2-sub-item-title,
+.section-search-modal.on .category {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.section-search-modal.on .filter-item .item-title::before {
+.section-search-modal.on .depth1-sub-item-all::before,
+.section-search-modal.on .depth2-sub-item-title::before,
+.section-search-modal.on .category::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.section-search-modal.on .filter-item-title.on::before,
+.section-search-modal.on .depth1-sub-item-title.on::before {
+  transform: rotate(180deg);
+}
+.section-search-modal.on .filter-item-title::before,
+.section-search-modal.on .depth1-sub-item-title::before {
   content: "";
   display: block;
   background-image: url(../images/sp_pc.png);
@@ -1178,72 +1210,4 @@ fieldset {
   background-position: -136px -93px;
   width: 8px;
   height: 5px;
-}
-.section-search-modal.on .filter-item .item-title.on::before {
-  transform: rotate(180deg);
-}
-.section-search-modal.on .filter-item .category {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section-search-modal.on .filter-item .category::before {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  border: 1px solid #d0d0d0;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-}
-.section-search-modal.on .filter-item .sub-list {
-  display: none;
-}
-.section-search-modal.on .filter-item .sub-list.on {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px 0;
-  padding-left: 20px;
-}
-.section-search-modal.on .filter-item .sub-list.on .sub-item .sub-item-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section-search-modal.on .filter-item .sub-list.on .sub-item .sub-item-title::before {
-  content: "";
-  display: block;
-  background-image: url(../images/sp_pc.png);
-  background-size: 328px 205px;
-  background-position: -136px -93px;
-  width: 8px;
-  height: 5px;
-}
-.section-search-modal.on .filter-item .sub-list.on .sub-item.on .sub-item-title::before {
-  transform: rotate(180deg);
-}
-.section-search-modal.on .filter-item .sub-list.on .sub-item .item-list {
-  display: none;
-}
-.section-search-modal.on .filter-item .sub-list.on .sub-item .item-list.on {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px 0;
-  padding-left: 20px;
-}
-.section-search-modal.on .filter-item .sub-list.on .sub-item .item-list.on button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section-search-modal.on .filter-item .sub-list.on .sub-item .item-list.on button::before {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  border: 1px solid #d0d0d0;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
 }

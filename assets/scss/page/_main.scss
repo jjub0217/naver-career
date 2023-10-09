@@ -18,6 +18,7 @@
   }
 }
 
+
 .group-title {
   .headline {
     padding-top: 95px;
@@ -109,13 +110,10 @@
 
 
 .section-visual {
-  // margin-top: 64px;
   position: relative;
-
 
   @include mobile {
     .video-box {
-      // padding-bottom: 100%;
       padding-bottom: calc((199/320)*100%);
       position: relative;
 
@@ -130,16 +128,11 @@
     }
   }
 
-
-
-
   video {
     object-fit: cover;
     height: 544px;
     width: 100%;
   }
-
-
 
   .text-box {
     position: absolute;
@@ -197,8 +190,6 @@
 
 
 .section-search {
-  // position: relative;
-  // z-index: 2;
 
   // 이렇게 하면 그냥 자기 위치에서 붕 띄워지고, 브라우저 가로 꽉 차게 된다.
   // 그래서 바로 밑에 형제 요소인 section-teams 가 뒤로 들어가게 된다.
@@ -211,10 +202,8 @@
   }
 
   .form-group1 {
-
     // .form-area 높이의 반만큼만 올려라.
     transform: translateY(-50%);
-
 
     @include tablet {
       display: none;
@@ -338,15 +327,17 @@
     padding-bottom: 50px;
   }
 
-  .teams-list {
-    padding-top: 70px;
+  .teams {
+    &-list {
+      padding-top: 70px;
 
-    @include tablet {
-      padding-top: 30px;
+      @include tablet {
+        padding-top: 30px;
 
+      }
     }
 
-    .teams-item {
+    &-item {
       padding: 20px 0;
       line-height: 60px;
 
@@ -417,9 +408,6 @@
         }
       }
 
-
-
-
       &:hover {
         background-color: #eee;
       }
@@ -427,10 +415,6 @@
 
     }
   }
-
-
-
-
 
 }
 
@@ -663,7 +647,7 @@
       justify-content: space-between;
       border-bottom: 1px solid #d0d0d0;
       position: relative;
-      padding-top: 20px;
+      padding-top: 25px;
       margin-bottom: 10px;
 
       input {
@@ -705,144 +689,87 @@
     }
 
     .filter-group {
-      padding-top: 20px;
-      padding-bottom: 20px;
-
+      padding-top: 35px;
+      padding-bottom: 10px;
     }
   }
+
 
   &.on {
     display: flex;
 
-    .filter-list {
-      padding-top: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .filter {
+      &-list {
+        padding-top: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+      }
+
+      &-item {
+        font-family: "NanumSquare", sans-serif;
+        font-size: 14px;
+      }
     }
 
-    .filter-item {
-      font-family: "NanumSquare", sans-serif;
-      font-size: 14px;
-
-      .item-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        &::before {
-          content: "";
-          display: block;
-          background-image: url(../images/sp_pc.png);
-          background-size: 328px 205px;
-          background-position: -136px -93px;
-          width: 8px;
-          height: 5px;
-        }
-
-        &.on {
-          &::before {
-            transform: rotate(180deg);
-          }
-        }
-      }
-
-      .category {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        &::before {
-          content: "";
-          display: block;
-          width: 8px;
-          height: 8px;
-          border: 1px solid #d0d0d0;
-          border-radius: 50%;
-          -webkit-border-radius: 50%;
-        }
-      }
-
-      .sub-list {
+    .depth1-sub,
+    .depth2-sub {
+      &-list {
         display: none;
 
         &.on {
           display: flex;
           flex-direction: column;
-          gap: 10px;
-          padding: 10px 0;
-          // display: block;
-          // background: #aaa;
+          gap: 19px;
+          padding: 18px 0 0 0;
           padding-left: 20px;
-
-          .sub-item {
-
-            .sub-item-title {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-
-              &::before {
-                content: "";
-                display: block;
-                background-image: url(../images/sp_pc.png);
-                background-size: 328px 205px;
-                background-position: -136px -93px;
-                width: 8px;
-                height: 5px;
-              }
-
-
-            }
-
-            &.on {
-              .sub-item-title {
-                &::before {
-                  transform: rotate(180deg);
-                }
-
-              }
-            }
-
-            .item-list {
-              display: none;
-
-
-              &.on {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                padding: 10px 0;
-                // display: block;
-                // background: skyblue;
-                padding-left: 20px;
-
-                button {
-                  // position: relative;
-
-                  display: flex;
-                  align-items: center;
-                  gap: 10px;
-
-                  &::before {
-                    content: "";
-                    // position: absolute;
-                    // top: 8px;
-                    // left: 0;
-                    display: block;
-                    width: 8px;
-                    height: 8px;
-                    border: 1px solid #d0d0d0;
-                    border-radius: 50%;
-                    -webkit-border-radius: 50%;
-                  }
-                }
-
-              }
-            }
-          }
         }
       }
     }
+
+    .filter-item-title,
+    .depth1-sub-item-title,
+    .depth1-sub-item-all,
+    .depth2-sub-item-title,
+    .category {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+
+    .depth1-sub-item-all,
+    .depth2-sub-item-title,
+    .category {
+      &::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #d0d0d0;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+      }
+    }
+
+    .filter-item-title,
+    .depth1-sub-item-title {
+      &.on {
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(../images/sp_pc.png);
+        background-size: 328px 205px;
+        background-position: -136px -93px;
+        width: 8px;
+        height: 5px;
+      }
+    }
+
   }
 }
