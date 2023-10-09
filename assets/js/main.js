@@ -43,11 +43,38 @@ $(function () {
 
   $('.section-search .btn-search.mo').click(function(){
     $('.section-search-modal').addClass('on')
+
   })
+
+    function list() {
+
+      fetch('./data.json')
+        .then(res => res.json())
+        .then(json => {
+          console.log(json);
+          data = json.items
+
+
+
+          // let html = ``
+          let html = ``
+          data.forEach(element => {
+            html += `
+                    <li class="depth1-sub-item">
+                      <button class="depth1-sub-item-title">${element.depth1SubItemTitle}</button>
+                    </li>
+                  `
+          });
+          console.log(html);
+          $(".depth1-sub-list").html(html)
+        })
+    }
 
   $('.section-search-modal .filter-item button').click(function(){
     $(this).toggleClass('on')
     $(this).siblings('.depth1-sub-list').toggleClass('on')
+    list()
+    // console.log(list(type));
   })
 
   $('.section-search-modal .filter-item .depth1-sub-list .depth1-sub-item').click(function(){

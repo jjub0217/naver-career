@@ -1,0 +1,207 @@
+{
+  "items": [
+    {
+      "Tech": [
+        {
+          "Software Development": [
+            "Frontend",
+            "Android",
+            "IOS"
+          ]
+        },
+        {
+          " Hardware Development": [
+            "Hardware"
+          ]
+        },
+        {
+          "Infra Engineering": [
+            "Infra Engineering",
+            "Data Center Engineering"
+          ]
+        },
+        {
+          "Security": [
+            "Security"
+          ]
+        },
+        {
+          "Tech Operations": [
+            "Tech Staff",
+            "QA"
+          ]
+        },
+        {
+          "공통": [
+            "공통"
+          ]
+        }
+      ]
+    },
+    {
+      "Design": [
+        {
+          "Product Design": [
+            "Product Design"
+          ]
+        },
+        {
+          "Visual Comm. & Brand Design": [
+            "Visual Comm. & Brand Design"
+          ]
+        },
+        {
+          "Infra Engineering": [
+            "Interactive Design"
+          ]
+        },
+        {
+          "Experience Insight & Planning": [
+            "Experience Insight & Planning"
+          ]
+        },
+        {
+          "Content Writing": [
+            "Content Writing"
+          ]
+        },
+        {
+          "공통": [
+            "공통"
+          ]
+        }
+      ]
+    },
+    {
+      "Service & Business": [
+        {
+          "Product Development": [
+            "Product Development"
+          ]
+        },
+        {
+          "Content Development": [
+            "Content Development"
+          ]
+        },
+        {
+          "Business Development": [
+            "Business Development"
+          ]
+        },
+        {
+          "Trust&Safety": [
+            "Trust&Safety"
+          ]
+        },
+        {
+          "어카운트/세일즈": [
+            "어카운트/세일즈"
+          ]
+        },
+        {
+          "공통": [
+            "공통"
+          ]
+        }
+      ]
+    },
+    {
+      "Corporate": [
+        {
+          "Marketing": [
+            "Marketing",
+            "Brand Planning",
+            "Content Creative",
+            "User Research & Data Insight",
+            "Marketing 공통"
+          ]
+        },
+        {
+          "Finance": [
+            "재무기획",
+            "회계",
+            "세무",
+            "자금",
+            "Finance 공통"
+          ]
+        },
+        {
+          "Service Infra": [
+            "소싱",
+            "운영관리",
+            "빌링",
+            "구매",
+            "부동산"
+          ]
+        },
+        {
+          "Partner Growth Support": [
+            "Partner Growth Support"
+          ]
+        },
+        {
+          "Corporate Development": [
+            "투자",
+            "Investor Relations",
+            "Corporate Strategy",
+            "ESG"
+          ]
+        },
+        {
+          "Compliance": [
+            "Risk Management",
+            "내부감사"
+          ]
+        },
+        {
+          "Legal": [
+            "법무",
+            "지식재산"
+          ]
+        },
+        {
+          "Privacy": [
+            "개인정보보호",
+            "통신비밀보호"
+          ]
+        },
+        {
+          "Communication": [
+            "Risk Management",
+            "내부감사"
+          ]
+        },
+        {
+          "Compliance": [
+            "Strategic Communication",
+            "산업및정책연구",
+            "Corporate Experience",
+            "Communication 공통"
+          ]
+        },
+        {
+          "HR": [
+            "Human Resources",
+            "Employee Relations",
+            "Talent Acquisition",
+            "Culture Experience",
+            "HR 공통"
+          ]
+        },
+        {
+          "Assist": [
+            "채용운영",
+            "통번역"
+          ]
+        },
+        {
+          "Assist": [
+            "채용운영",
+            "통번역"
+          ]
+        }
+      ]
+    }
+  ]
+}
