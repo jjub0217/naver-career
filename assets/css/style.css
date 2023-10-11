@@ -565,13 +565,18 @@ fieldset {
   line-height: 32px;
   letter-spacing: -0.44px;
   font-weight: bold;
-  padding-right: 30px;
+  padding-right: 20px;
 }
 @media screen and (max-width: 1024px) {
   .headline-sm {
     font-size: 16px;
     line-height: 26px;
     letter-spacing: -0.32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .headline-sm {
+    padding-bottom: 5px;
   }
 }
 
@@ -596,6 +601,16 @@ fieldset {
   font-weight: normal;
   letter-spacing: -0.36px;
   vertical-align: top;
+}
+@media screen and (max-width: 1024px) {
+  .group-title .link-more {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .group-title .link-more {
+    display: inline-block;
+  }
 }
 .group-title .link-more::after {
   content: "";
@@ -736,12 +751,17 @@ fieldset {
 }
 @media screen and (max-width: 1024px) {
   .section-search .form-group1 {
-    display: none;
+    transform: none;
   }
 }
 .section-search .form-group1 .flex-group {
   display: flex;
   background: #fff;
+}
+@media screen and (max-width: 1024px) {
+  .section-search .form-group1 .flex-group {
+    display: none;
+  }
 }
 .section-search .form-group1 .flex-group .form-field {
   display: flex;
@@ -814,21 +834,45 @@ fieldset {
   color: #fff;
   font-weight: bold;
 }
+@media screen and (max-width: 1024px) {
+  .section-search .btn-search {
+    height: auto;
+    line-height: 1;
+  }
+}
 .section-search .btn-search.mo {
   display: none;
 }
 @media screen and (max-width: 1024px) {
   .section-search .btn-search.mo {
     display: block;
-    height: 42px;
-    line-height: 1;
+    position: relative;
     padding-left: 10px;
     margin-top: 22px;
     font-weight: normal;
-    text-align: left;
     width: 100%;
     color: #696868;
     background-color: #ebebeb;
+  }
+  .section-search .btn-search.mo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 11px;
+    background-image: url("../images/sp_mo.png");
+    background-size: 195px 181px;
+    background-position: -140px -125px;
+    width: 19px;
+    height: 19px;
+    z-index: 20;
+  }
+  .section-search .btn-search.mo button {
+    height: 42px;
+    width: 100%;
+    padding: 10px 45px 10px 10px;
+    text-align: left;
   }
 }
 
@@ -850,9 +894,19 @@ fieldset {
     padding-top: 30px;
   }
 }
+@media screen and (max-width: 767px) {
+  .section-teams .teams-list {
+    padding-top: 20px;
+  }
+}
 .section-teams .teams-item {
   padding: 20px 0;
   line-height: 60px;
+}
+@media screen and (max-width: 767px) {
+  .section-teams .teams-item {
+    padding: 0;
+  }
 }
 .section-teams .teams-item .inner2 {
   padding: 0;
@@ -1094,12 +1148,12 @@ fieldset {
   width: 100%;
   height: 100%;
   background: #fff;
-  overflow-y: auto;
 }
 .section-search-modal .inner2 {
   margin: 0;
-  padding: 20px 32px;
+  padding: 30px 32px 60px;
   width: 100%;
+  overflow-y: auto;
 }
 .section-search-modal .inner2 .modal-close {
   background-image: url(../images/sp_mo.png);
@@ -1151,6 +1205,22 @@ fieldset {
 .section-search-modal .inner2 .filter-group {
   padding-top: 35px;
   padding-bottom: 10px;
+}
+.section-search-modal .inner2 .clear-filters {
+  margin-top: 40px;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: -0.24px;
+  position: relative;
+}
+.section-search-modal .inner2 .clear-filters::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #000;
 }
 .section-search-modal.on {
   display: flex;

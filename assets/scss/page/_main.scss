@@ -8,13 +8,17 @@
   line-height: 32px;
   letter-spacing: -0.44px;
   font-weight: bold;
-  padding-right: 30px;
+  padding-right: 20px;
 
 
   @include tablet {
     font-size: 16px;
     line-height: 26px;
     letter-spacing: -0.32px;
+  }
+
+  @include mobile {
+    padding-bottom: 5px;
   }
 }
 
@@ -41,6 +45,14 @@
     font-weight: normal;
     letter-spacing: -0.36px;
     vertical-align: top;
+
+    @include tablet {
+      font-size: 12px;
+    }
+
+    @include mobile {
+      display: inline-block;
+    }
 
     &::after {
       content: "";
@@ -206,12 +218,16 @@
     transform: translateY(-50%);
 
     @include tablet {
-      display: none;
+      transform: none;
     }
 
     .flex-group {
       display: flex;
       background: #fff;
+
+      @include tablet {
+        display: none;
+      }
 
       .form-field {
         display: flex;
@@ -295,20 +311,49 @@
     color: #fff;
     font-weight: bold;
 
+    @include tablet {
+      height: auto;
+      line-height: 1;
+    }
+
     &.mo {
       display: none;
 
       @include tablet {
         display: block;
-        height: 42px;
-        line-height: 1;
+        position: relative;
+        // height: 42px;
+        // line-height: 1;
         padding-left: 10px;
         margin-top: 22px;
         font-weight: normal;
-        text-align: left;
+
         width: 100%;
         color: #696868;
         background-color: #ebebeb;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 11px;
+          background-image: url("../images/sp_mo.png");
+          background-size: 195px 181px;
+          background-position: -140px -125px;
+          width: 19px;
+          height: 19px;
+          z-index: 20;
+        }
+
+        button {
+          height: 42px;
+          width: 100%;
+          padding: 10px 45px 10px 10px;
+          text-align: left;
+
+        }
       }
     }
   }
@@ -335,11 +380,19 @@
         padding-top: 30px;
 
       }
+
+      @include mobile {
+        padding-top: 20px;
+      }
     }
 
     &-item {
       padding: 20px 0;
       line-height: 60px;
+
+      @include mobile {
+        padding: 0;
+      }
 
       .inner2 {
         padding: 0;
@@ -626,12 +679,13 @@
   width: 100%;
   height: 100%;
   background: #fff;
-  overflow-y: auto;
+
 
   .inner2 {
     margin: 0;
-    padding: 20px 32px;
+    padding: 30px 32px 60px;
     width: 100%;
+    overflow-y: auto;
 
     .modal-close {
       background-image: url(../images/sp_mo.png);
@@ -692,6 +746,25 @@
       padding-top: 35px;
       padding-bottom: 10px;
     }
+
+    .clear-filters {
+      margin-top: 40px;
+      font-size: 12px;
+      line-height: 22px;
+      letter-spacing: -0.24px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #000;
+      }
+    }
+
   }
 
 
