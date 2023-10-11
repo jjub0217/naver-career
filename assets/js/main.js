@@ -191,7 +191,6 @@ $(function () {
    * @swiper기능
    * 
    */
-  // pc 에서는 손가락으로 슬라이드가 움직여지면 안된다. 그렇기 때문에 옵션을 줘야한다. ===> touchRatio
   const visualSlide = new Swiper('.section-visual .swiper',{
     loop: true,
     autoplay:{
