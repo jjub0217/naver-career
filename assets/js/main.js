@@ -128,34 +128,52 @@ $(function () {
         </li>`
       })
       $(".filter-list1").html(html1);
-      $('.filter-item-title').click(function () {
-        $(this).toggleClass('on');
-        $(this).siblings('.depth1-sub-list').toggleClass('on');
-      });
-      $('.depth1-sub-item').click(function(e){
-        e.stopPropagation()
-        if($(this).find('.depth2-sub-list').length){
-          $(this).find('.depth1-sub-item-title').toggleClass('on')
-          $(this).find('.depth2-sub-list').toggleClass('on')
-        }
-      });
-      $('.depth2-sub-item-title').click(function(e){
-        e.stopPropagation()
-        $(this).toggleClass('on')
-      });
-      $('.depth1-sub-item').click(function(e){
-        e.stopPropagation()
-        if($(this).find(".depth1-sub-item-all").length){
-          $(this).find(".depth1-sub-item-all").toggleClass('on')
-          if($(this).find(".depth1-sub-item-all").hasClass('on')){
-            $(this).siblings((".depth1-sub-item")).find(".depth2-sub-item-title").addClass("on")
-          }else{
-            $(this).siblings((".depth1-sub-item")).find(".depth2-sub-item-title").removeClass("on")
-          }
-        }  
-      })
     })
   }
+
+
+  /**
+   * @태블릿과모바일버전의모달에서대메뉴에on붙이고형제요소인리스트에on붙이는이벤트
+   * 
+   */
+  $(document).on("click",'.filter-item-title', (function () {
+    $(this).toggleClass('on');
+    $(this).siblings('.depth1-sub-list').toggleClass('on');
+  }))
+
+
+  /**
+   * @태블릿과모바일버전의모달에서depth1메뉴에on붙이고형제요소인리스트에on붙이는이벤트
+   * 
+   */
+  $(document).on("click",'.depth1-sub-item-title',function(){
+      $(this).toggleClass('on')
+      $(this).siblings('.depth2-sub-list').toggleClass('on')
+  });
+
+
+  /**
+   * @태블릿과모바일버전의모달에서depth1의전체버튼에on붙이고depth2버튼에전부on붙이는이벤트
+   * 
+   */
+  $(document).on("click",'.depth1-sub-item-all',function(e){
+      $(this).toggleClass('on')
+      if($(this).hasClass("on")){
+        $(this).parent().siblings().find(".depth2-sub-item-title").addClass("on")
+      }else{
+        $(this).parent().siblings().find(".depth2-sub-item-title").removeClass("on")
+      }
+  })
+
+
+  /**
+   * @태블릿과모바일버전의모달에서depth2메뉴에on붙이는이벤트
+   * 
+   */
+  $(document).on("click",'.depth2-sub-item-title',function(e){
+    $(this).toggleClass('on')
+  });
+
 
 
   /**

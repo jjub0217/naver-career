@@ -785,6 +785,7 @@
       }
     }
 
+    // sub-list 는 flex 만 주고 건드리지 말고, display none 은 sub-list 를 감싸는 area 로 컨트롤해야 한다.
     .depth1-sub,
     .depth2-sub {
       &-list {
