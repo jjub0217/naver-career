@@ -39,7 +39,7 @@
         <nav class="gnb">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="#" class="nav">
+              <a href="" class="nav-item_title">
                 <span>Teams</span>
               </a>
               <ul class="sub-list ">
@@ -57,10 +57,10 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item"><a href="#" class="nav"><span>People</span></a></li>
-            <li class="nav-item"><a href="#" class="nav"><span>Benefits</span></a></li>
-            <li class="nav-item"><a href="#" class="nav"><span>Culture</span></a></li>
-            <li class="nav-item"><a href="#" class="nav"><span>Value</span></a></li>
+            <li class="nav-item"><a href="" class="nav-item_title"><span>People</span></a></li>
+            <li class="nav-item"><a href="" class="nav-item_title"><span>Benefits</span></a></li>
+            <li class="nav-item"><a href="" class="nav-item_title"><span>Culture</span></a></li>
+            <li class="nav-item"><a href="" class="nav-item_title"><span>Value</span></a></li>
           </ul>
         </nav>
         <div class="group-flex">
@@ -74,7 +74,7 @@
             <li class="util-item"><a href="" class="link-faq"><span>FAQ</span></a></li>
           </ul>
           <div class="lang-area">
-            <a class="curr"><span>KR</span></a>
+            <a href="" class="curr"><span>KR</span></a>
             <ul class="lang-list">
               <li class="lang-item"><a href="">EN</a></li>
             </ul>
@@ -84,7 +84,7 @@
         <div class="mo_gnb_inner">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="#" class="nav hasSubMenu">
+              <a href="" class="nav-item_title hasSubMenu">
                 <span>Teams</span>
               </a>
               <ul class="sub-list">
@@ -102,10 +102,10 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item"><a href="#" class="nav"><span>People</span></a></li>
-            <li class="nav-item"><a href="#" class="nav"><span>Benefits</span></a></li>
-            <li class="nav-item"><a href="#" class="nav"><span>Culture</span></a></li>
-            <li class="nav-item"><a href="#" class="nav"><span>Value</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-item_title"><span>People</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-item_title"><span>Benefits</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-item_title"><span>Culture</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-item_title"><span>Value</span></a></li>
           </ul>
           <i class="vertical"></i>
           <ul class="util-list">
@@ -211,7 +211,8 @@
                   </div>
                   <div class="form-field">
                     <span class="keyword">법인</span>
-                    <select>
+                    <label for="corporation" class="blind">법인선택</label>
+                    <select id="corporation">
                       <option disabled selected>법인선택</option>
                       <option>NAVER</option>
                       <option>NAVER Cloud</option>
@@ -226,7 +227,8 @@
                   </div>
                   <div class="form-field">
                     <span class="keyword">직군</span>
-                    <select>
+                    <label for="occupation" class="blind">직군선택</label>
+                    <select id="occupation">
                       <option disabled selected>직군선택</option>
                       <option>Tech</option>
                       <option>Design</option>
@@ -578,6 +580,7 @@
         </div>
       </section>
       <section class="section-search-modal">
+        <h2 class="blind">직군검색모닱창</h2>
         <div class="inner2">
           <button class="modal-close" aria-label="사이드메뉴 닫기"></button>
           <div class="input-box">

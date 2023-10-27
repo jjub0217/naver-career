@@ -232,18 +232,18 @@ fieldset {
   font-size: 17px;
   height: 100%;
 }
-.header .inner1 .gnb .nav-list .nav-item {
+.header .inner1 .gnb .nav-item {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.header .inner1 .gnb .nav-list .nav-item .nav {
+.header .inner1 .gnb .nav-item_title {
   display: flex;
   align-items: center;
   height: 100%;
   padding: 0 10px;
 }
-.header .inner1 .gnb .nav-list .nav-item .sub-list {
+.header .inner1 .gnb .nav-item .sub-list {
   height: 182px;
   position: absolute;
   top: 100%;
@@ -252,14 +252,14 @@ fieldset {
   justify-content: center;
   display: none;
 }
-.header .inner1 .gnb .nav-list .nav-item .sub-list.on {
+.header .inner1 .gnb .nav-item .sub-list.on {
   background: #fff;
   display: flex;
 }
-.header .inner1 .gnb .nav-list .nav-item .sub-list .sub-item {
+.header .inner1 .gnb .nav-item .sub-item {
   line-height: 32px;
 }
-.header .inner1 .gnb .nav-list .nav-item .sub-list .sub-item a {
+.header .inner1 .gnb .nav-item .sub-item a {
   display: block;
   padding: 3px 13px;
 }
@@ -340,20 +340,20 @@ fieldset {
     align-items: flex-start;
     gap: 10px;
   }
-  .header .inner1 .mo_gnb_inner.isAct .nav-list .nav-item {
+  .header .inner1 .mo_gnb_inner.isAct .nav-item {
     font-size: 22px;
     width: 100%;
     padding: 2px 0;
   }
-  .header .inner1 .mo_gnb_inner.isAct .nav-list .nav-item:focus {
+  .header .inner1 .mo_gnb_inner.isAct .nav-item:focus {
     background: #f00;
   }
-  .header .inner1 .mo_gnb_inner.isAct .nav-list .nav-item .hasSubMenu {
+  .header .inner1 .mo_gnb_inner.isAct .nav-item .hasSubMenu {
     display: flex;
     align-items: center;
     gap: 8px;
   }
-  .header .inner1 .mo_gnb_inner.isAct .nav-list .nav-item .hasSubMenu::after {
+  .header .inner1 .mo_gnb_inner.isAct .nav-item .hasSubMenu::after {
     content: "";
     display: block;
     background-image: url("../images/sp_mo.png");
@@ -362,17 +362,17 @@ fieldset {
     width: 10px;
     height: 6px;
   }
-  .header .inner1 .mo_gnb_inner.isAct .nav-list .nav-item .sub-list {
+  .header .inner1 .mo_gnb_inner.isAct .nav-item .sub-list {
     display: none;
   }
-  .header .inner1 .mo_gnb_inner.isAct .nav-list .nav-item .sub-list.on {
+  .header .inner1 .mo_gnb_inner.isAct .nav-item .sub-list.on {
     display: block;
     position: relative;
     top: 0;
     padding: 0;
     margin-bottom: 20px;
   }
-  .header .inner1 .mo_gnb_inner.isAct .nav-list .nav-item .sub-list.on .sub-item {
+  .header .inner1 .mo_gnb_inner.isAct .nav-item .sub-item {
     font-size: 18px;
     margin-top: 13px;
     padding: 0 20px;
@@ -398,7 +398,7 @@ fieldset {
     flex-direction: column;
     font-size: 17px;
   }
-  .header .inner1 .mo_gnb_inner.isAct .lang-area .lang-item .text:before {
+  .header .inner1 .mo_gnb_inner.isAct .lang-item .text:before {
     content: "";
     margin-right: 10px;
     display: inline-block;
@@ -407,7 +407,7 @@ fieldset {
     border-radius: 50%;
     border: 1px solid #d0d0d0;
   }
-  .header .inner1 .mo_gnb_inner.isAct .lang-area .lang-item .text.on:before {
+  .header .inner1 .mo_gnb_inner.isAct .lang-item .text.on:before {
     content: "";
     margin-right: 10px;
     display: inline-block;

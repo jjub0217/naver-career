@@ -4,7 +4,8 @@ $(function () {
    *  @헤더안에있는언어선택
    * 
   */
-  $('.header .group-flex .lang-area').click(function(){
+  $('.header .group-flex .lang-area').click(function(e){
+    e.preventDefault()
     $(this).toggleClass('on')
   }) 
 
@@ -15,8 +16,6 @@ $(function () {
    */
 
   $('.gnb .nav-item').hover(function(e){
-    console.log(
-    $(this).find('.sub-list').length)
     // 이벤트의 타켓인 this의 자식들에 sub-list 가 있다면 length 는 1 이 나오고, 없다면 0 이 나온다.
     if($(this).find('.sub-list').length){
       // 이벤트 타겟인 this의 자식들에 sub-list 에 클래스 on 붙힘
@@ -105,26 +104,26 @@ $(function () {
               <input type="hidden" value="all" name="all" />
               <button class="depth1-sub-item-all">전체</button>
             </li>`
-        element.depth1SubList.forEach(el => {
-          html1 += 
-          `<li class="depth1-sub-item">
-              <button class="depth1-sub-item-title">
-                ${el.depth1SubItemTitle}
-              </button>
-              <ul class="depth2-sub-list">`
-          el.depth2SubItemTitles.forEach(title =>{
+            element.depth1SubList.forEach(el => {
             html1 += 
-            `<li class="depth2-sub-item">
-              <input type="hidden" value="${title}" name="${title}" />
-              <button class="depth2-sub-item-title">${title}</button>
-            </li>`
-          })
+            `<li class="depth1-sub-item">
+                <button class="depth1-sub-item-title">
+                  ${el.depth1SubItemTitle}
+                </button>
+                <ul class="depth2-sub-list">`
+                  el.depth2SubItemTitles.forEach(title =>{
+                  html1 += 
+                  `<li class="depth2-sub-item">
+                    <input type="hidden" value="${title}" name="${title}" />
+                    <button class="depth2-sub-item-title">${title}</button>
+                  </li>`
+                  })
+                  html1 += 
+                `</ul>
+              </li>`
+            }) 
           html1 += 
           `</ul>
-          </li>`
-        }) 
-        html1 += 
-        `</ul>
         </li>`
       })
       $(".filter-list1").html(html1);

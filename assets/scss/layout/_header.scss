@@ -54,15 +54,11 @@
       &.on {
         &:before {
           content: "";
-          // body 로부터 absolute
           position: absolute;
-          // header 전체 높이만큼 top 0 에서 내려와라.
-          // 부모가 header 니까, relative 를 안주면, 해당 요소의 부모의 위치가 기준이 된다. 
           top: 100%;
           left: 0;
           height: 182px;
           width: 100%;
-          // background: blue;
           background: #fff;
 
         }
@@ -86,58 +82,50 @@
         }
       }
 
-      .nav-list {
-        display: flex;
-        font-size: 17px;
-        height: 100%;
+      .nav {
+        &-list {
+          display: flex;
+          font-size: 17px;
+          height: 100%;
+        }
 
-        .nav-item {
+        &-item {
           display: flex;
           flex-direction: column;
           height: 100%;
 
-          .nav {
+          &_title {
             display: flex;
             align-items: center;
             height: 100%;
             padding: 0 10px;
           }
 
-          .sub-list {
-            height: 182px;
-            // body 로부터 absolute
-            position: absolute;
-
-            // header 높이의 절반만큼 top 0 에서 내려와라.
-            // top: 50%;
-
-            // header 전체 높이만큼 top 0 에서 내려와라.
-            top: 100%;
-            // left: 0;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            display: none;
-
-            &.on {
-              background: #fff;
-
-
+          .sub {
+            &-list {
+              height: 182px;
+              position: absolute;
+              top: 100%;
               display: flex;
+              flex-direction: column;
+              justify-content: center;
+              display: none;
+
+              &.on {
+                background: #fff;
+                display: flex;
+              }
             }
 
-            .sub-item {
+            &-item {
               line-height: 32px;
 
               a {
                 display: block;
                 padding: 3px 13px;
               }
-
             }
           }
-
         }
       }
     }
@@ -221,13 +209,15 @@
           transform: none;
           background: #fff;
 
-          .nav-list {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
+          .nav {
+            &-list {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 10px;
+            }
 
-            .nav-item {
+            &-item {
               font-size: 22px;
               width: 100%;
               padding: 2px 0;
@@ -252,24 +242,29 @@
                 }
               }
 
-              .sub-list {
-                display: none;
+              .sub {
+                &-list {
+                  display: none;
 
-                &.on {
-                  display: block;
-                  position: relative;
-                  top: 0;
-                  padding: 0;
-                  margin-bottom: 20px;
-
-                  .sub-item {
-                    font-size: 18px;
-                    margin-top: 13px;
-                    padding: 0 20px;
+                  &.on {
+                    display: block;
+                    position: relative;
+                    top: 0;
+                    padding: 0;
+                    margin-bottom: 20px;
                   }
                 }
+
+                &-item {
+                  font-size: 18px;
+                  margin-top: 13px;
+                  padding: 0 20px;
+                }
               }
+
             }
+
+
           }
 
           .vertical {
@@ -291,12 +286,14 @@
             gap: 10px;
           }
 
-          .lang-area {
-            display: flex;
-            flex-direction: column;
-            font-size: 17px;
+          .lang {
+            &-area {
+              display: flex;
+              flex-direction: column;
+              font-size: 17px;
+            }
 
-            .lang-item {
+            &-item {
               .text {
                 &:before {
                   content: "";
@@ -322,6 +319,8 @@
                 }
               }
             }
+
+
           }
         }
       }
