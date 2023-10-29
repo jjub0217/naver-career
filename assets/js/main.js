@@ -134,6 +134,7 @@ $(function () {
   /**
    * @태블릿과모바일버전의모달에서대메뉴에on붙이고형제요소인리스트에on붙이는이벤트
    * 
+   * 
    */
   $(document).on("click",'.filter-item-title', (function () {
     $(this).toggleClass('on');
