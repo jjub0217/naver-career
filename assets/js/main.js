@@ -88,12 +88,10 @@ $(function () {
    * 
    */
   function list() {
-
     fetch('./data.json')
     .then(res => res.json())
     .then(json => {
-      data = json.items
-
+      let data = json.items
       let html1 = ``
       data.forEach(element => {
         html1 += 
