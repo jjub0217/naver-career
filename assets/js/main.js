@@ -72,7 +72,52 @@ $(function () {
     $(this).css('color', "#000")
   })
 
+  /**
+   * @태블릿과모바일버전의모달내용불러오는fetch함수
+   * 
+   */
+  const list = () =>{
+    fetch('./data.json')
+      .then(res => res.json())
+      .then(json => {
+        let data = json.items
+        let html1 = ``
+        data.forEach(element => {
+          html1 += 
+          `<li class="filter-item">
+            <button class="filter-item-title">${element.filterItemTitle}</button>
+            <ul class="depth1-sub-list">
+              <li class="depth1-sub-item">
+                <input type="hidden" value="all" name="all" />
+                <button class="depth1-sub-item-all">전체</button>
+              </li>`
+              element.depth1SubList.forEach(el => {
+              html1 += 
+              `<li class="depth1-sub-item">
+                  <button class="depth1-sub-item-title">
+                    ${el.depth1SubItemTitle}
+                  </button>
+                  <ul class="depth2-sub-list">`
+                    el.depth2SubItemTitles.forEach(title =>{
+                    html1 += 
+                    `<li class="depth2-sub-item">
+                      <input type="hidden" value="${title}" name="${title}" />
+                      <button class="depth2-sub-item-title">${title}</button>
+                    </li>`
+                    })
+                    html1 += 
+                  `</ul>
+                </li>`
+              }) 
+            html1 += 
+            `</ul>
+          </li>`
+        })
+        $(".filter-list1").html(html1);
+      })
+  }
 
+  
   /**
    * @테블릿과모바일버전의직군검색모달열기와모달내용fetch해서불러오는함수실행
    * 
@@ -83,50 +128,6 @@ $(function () {
   })
 
 
-  /**
-   * @태블릿과모바일버전의모달내용불러오는fetch함수
-   * 
-   */
-  function list() {
-    fetch('./data.json')
-    .then(res => res.json())
-    .then(json => {
-      let data = json.items
-      let html1 = ``
-      data.forEach(element => {
-        html1 += 
-        `<li class="filter-item">
-          <button class="filter-item-title">${element.filterItemTitle}</button>
-          <ul class="depth1-sub-list">
-            <li class="depth1-sub-item">
-              <input type="hidden" value="all" name="all" />
-              <button class="depth1-sub-item-all">전체</button>
-            </li>`
-            element.depth1SubList.forEach(el => {
-            html1 += 
-            `<li class="depth1-sub-item">
-                <button class="depth1-sub-item-title">
-                  ${el.depth1SubItemTitle}
-                </button>
-                <ul class="depth2-sub-list">`
-                  el.depth2SubItemTitles.forEach(title =>{
-                  html1 += 
-                  `<li class="depth2-sub-item">
-                    <input type="hidden" value="${title}" name="${title}" />
-                    <button class="depth2-sub-item-title">${title}</button>
-                  </li>`
-                  })
-                  html1 += 
-                `</ul>
-              </li>`
-            }) 
-          html1 += 
-          `</ul>
-        </li>`
-      })
-      $(".filter-list1").html(html1);
-    })
-  }
 
 
   /**
