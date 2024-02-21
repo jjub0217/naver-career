@@ -7,18 +7,19 @@
 이 프로젝트는 네이버 커리어 웹 사이트 클론코딩 한 페이지입니다. <br>
 2023.07.13 ~ 2023.07.20 일주일간 페이지를 제작, 수정 및 배포하였습니다. <br>
 반응형 웹 페이지로 레이아웃 및 디자인이 다르게 되어있으며, Json 데이터를 fetch 해왔습니다.
+헤더를 건너뛰고 바로 본문으로 넘어갈수 있게끔 tab 키 기능을 추가하였습니다.
 
 
 
 ## 프로젝트 웹표준(W3C의 Markup Validation Service)
 결과 : 0개 <br>
-<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/cd9b2bd6-faf1-47ac-9faf-2b1154319317" width=500> <br>
+<img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/38ed131c-d6c4-4c29-b239-8671e2e14e56" width=500> <br>
 
 ## 프로젝트 웹접근성
 - Open-WAX 결과 : error 0
-<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/a79365e8-ad75-404b-a02d-a0157718b17a" width=500> <br>
+<img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/55b060fe-de64-4979-a252-22ceb0be6bc4" width=500> <br>
 - WAVE 결과: error 0
-<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/482cfff8-9844-40af-bd96-88a07dbf7f13" width=500>
+<img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/b23d851c-6853-4359-af60-cf3900bcec81" width=500>
 
 
 ## 기술 스택
@@ -28,19 +29,19 @@
 ![Javascript](https://img.shields.io/badge/Javascript-gray?style=flat-square&logo=Javascript&logoColor=f7df1e)
 ![jQuery](https://img.shields.io/badge/jQuery-0769ad?style=flat-square&logo=jQuery&logoColor=white)
 ![Swiper](https://img.shields.io/badge/Swiper-gray?style=flat-square&logo=Swiper&logoColor=0080FF)
-![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat-square&logo=GreenSock&logoColor=white)
+
 
 
 ## 포함된 자바스크립트 라이브러리
-| Name      | License                          | Copyright                                 |
-| --------- | -------------------------------- | ----------------------------------------- |
-| Swiper.js | MIT License                      | 2019 Vladimir Kharlampidi                 |
-| jQuery    | MIT License                      | OpenJS Foundation and jQuery contributors |
-| GSAP      | Standard License, Club GreenSock | 3.12.2ver 2023 GreenSock LLC              |
+| Name      | License     | Copyright                                 |
+| --------- | ----------- | ----------------------------------------- |
+| Swiper.js | MIT License | 2019 Vladimir Kharlampidi                 |
+| jQuery    | MIT License | OpenJS Foundation and jQuery contributors |
+
 
 ## 개선점
-- section-onlineEducation 영역의 tab item 을 클릭시에, floating-menu의 item의 텍스트 컬러도 바뀌는걸 놓쳐서 해당 디자인을 업데이트 하고 싶었음
-- 어떠한 교육을 북마크 아이콘을 클릭하여 저장하면, 서버에 저장되어있다가, 저장했던 교육은 북마크 다시 클릭했을때는 북마크 저장해제 기능을 구현하고 싶었다.(서버가 없으므로 구현 불가.)
+- 웹접근성을 더욱 지키기 위해 텍스트와 배경간의 명도 대비, 고대비 점수를 높이기
+- 웹접근성을 더욱 지키기 위해 aria 를 더 사용해보기
 
 
 ## 연락처
