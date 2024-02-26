@@ -55,7 +55,8 @@ $(function () {
    * @태블릿과모바일버전의gnb내부의서브메뉴열기
    * 
    */
-  $('.mo_gnb_inner .nav-item').click(function(){
+  $('.mo_gnb_inner .nav-item').click(function(e){
+    e.preventDefault()
     // 이벤트의 타켓인 this의 자식들에 sub-list 가 있다면 length 는 1 이 나오고, 없다면 0 이 나온다.
     if($(this).find('.sub-list').length){
       // 이벤트 타겟인 this의 자식들에 sub-list 에 클래스 on 붙힘
